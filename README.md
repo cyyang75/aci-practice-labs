@@ -62,3 +62,9 @@ S3 - Manage Certificates
  • Public Key Infrastructure (PKI) and Certificate Management
 
 ### Skills: Public Key Infrastructure · Intrusion Detection and Evasion · Firewall Implementation · Routing and Switching Configuration · Virtualization Management
+
+![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/ACI%20Practice%20Labs-my.png)
+
+![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/computer%20networking.png)
+
+![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/system%20and%20communication%20security.png)
