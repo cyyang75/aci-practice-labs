@@ -1,8 +1,7 @@
-# aci-practice-labs
-ACI Practice Labs
+#ACI Practice Labs
 
-During my studies at SNHU, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.
-
+##During my studies at SNHU, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.
+'''
 Below is a list of the labs I completed at ACI Practice Labs:
 ---------------------------------
 ACI Learning Practice Labs for the course "Computer Networking":
@@ -27,6 +26,7 @@ S1 - Customize or Write Simple Scripts
 S2 - Install and Configure AD Certificate Services
 S3 - Manage Certificates
 ---------------------------------
+
 Through these labs, I developed and sharpened the following skills:
  • Routing and Switching Configuration
  • Firewall Implementation and Traffic Filtering
