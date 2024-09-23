@@ -6,7 +6,7 @@
 
 ### Below is a list of the labs I completed at ACI Practice Labs:
 
----------------------------------
+---
 
 ACI Learning Practice Labs for the course "Computer Networking":
 
@@ -24,7 +24,7 @@ C6 - Configure and Verify RIPv2 for IPv4
 
 C7 - Configure and Verify NAT
 
----------------------------------
+---
 ACI Learning Practice Labs for the course "Network Security":
 
 N1 - Installing Hyper-V and Fedora Linux Workstation
@@ -39,7 +39,7 @@ N5 - IPv4 and IPv6 Access Lists for Traffic Filtering
 
 N6 - Evading IDS Firewalls and Honeypots
 
----------------------------------
+---
 
 ACI Learning Practice Labs for the course "System and Communication Security":
 
@@ -49,7 +49,7 @@ S2 - Install and Configure AD Certificate Services
 
 S3 - Manage Certificates
 
----------------------------------
+---
 
 ### Through these labs, I developed and sharpened the following skills:
 
