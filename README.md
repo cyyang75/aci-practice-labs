@@ -1,6 +1,6 @@
 ## ACI Practice Labs
 
-![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/ACI%20Practice%20Labs.png)
+![ACI Practice Labs](https://i.imgur.com/k2dYPmk.png)
 
 ### During my studies at SNHU, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.
 
@@ -65,8 +65,8 @@ S3 - Manage Certificates
 
 ### Skills: Public Key Infrastructure · Intrusion Detection and Evasion · Firewall Implementation · Routing and Switching Configuration · Virtualization Management
 
-![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/ACI%20Practice%20Labs-my.png)
+![ACI Practice Labs](https://i.imgur.com/fYzBdx7.png)
 
-![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/computer%20networking.png)
+![ACI Practice Labs](https://i.imgur.com/umPiil9.png)
 
-![ACI Practice Labs](https://raw.githubusercontent.com/cyyang75/aci-practice-labs/refs/heads/main/system%20and%20communication%20security.png)
+![ACI Practice Labs](https://i.imgur.com/1aYEClg.png)
