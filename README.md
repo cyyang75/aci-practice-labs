@@ -1,6 +1,6 @@
 # ACI Practice Labs
 <p align="center">
-![ACI Practice Labs](https://i.imgur.com/k2dYPmk.png)
+<img src="https://i.imgur.com/k2dYPmk.png" alt="ACI Practice Labs"/>
 </p>
 
 ### During my studies at SNHU, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.
