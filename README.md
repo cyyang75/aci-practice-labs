@@ -64,7 +64,7 @@ S3 - Manage Certificates
  
  • Public Key Infrastructure (PKI) and Certificate Management
 
-### Skills Obtained: 
+### Skills Practiced: 
 
 ### Public Key Infrastructure · Intrusion Detection and Evasion · Firewall Implementation · Routing and Switching Configuration · Virtualization Management
 
