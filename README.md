@@ -1,14 +1,23 @@
-# ACI Learning Practice Labs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACI Learning Practice Labs</title>
+</head>
+<body>
+    <h1>ACI Learning Practice Labs</h1>
 
-<p align="center">
-<img src="https://i.imgur.com/k2dYPmk.png" alt="ACI Practice Labs"/>
-</p>
+    <p align="center">
+        <img src="https://i.imgur.com/k2dYPmk.png" alt="ACI Practice Labs"/>
+    </p>
 
-### During my course studies at SNHU as a Cybersecurity major, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.
+    <p>During my course studies at SNHU as a Cybersecurity major, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.</p>
 
-### Below is a list of the labs I completed at ACI Learning Practice Labs:
+    <p>Below is a list of the labs I completed at ACI Learning Practice Labs:</p>
 
-  <hr>
+    <hr>
+
     <h4>ACI Learning Practice Labs for the course "Computer Networking"</h4>
     <ul>
         <li><a href="https://cyyang75.github.io/aci-practice-labs/Computer%20Networking/C1%20-%20Routing%20Concepts%20and%20Protocols.html" target="_blank">C1 - Routing Concepts and Protocols</a></li>
@@ -20,7 +29,7 @@
         <li><a href="https://cyyang75.github.io/aci-practice-labs/Computer%20Networking/C7%20-%20Configure%20and%20Verify%20NAT.html" target="_blank">C7 - Configure and Verify NAT</a></li>
     </ul>
 
-  <hr>
+    <hr>
 
     <h4>ACI Learning Practice Labs for the course "Network Security"</h4>
     <ul>
@@ -32,7 +41,7 @@
         <li><a href="https://cyyang75.github.io/aci-practice-labs/Network%20Security/N6%20-%20Evading%20IDS%20Firewalls%20and%20Honeypots.html" target="_blank">N6 - Evading IDS Firewalls and Honeypots</a></li>
     </ul>
 
-  <hr>
+    <hr>
 
     <h4>ACI Learning Practice Labs for the course "System and Communication Security"</h4>
     <ul>
@@ -40,26 +49,25 @@
         <li><a href="https://cyyang75.github.io/aci-practice-labs/System%20and%20Communication%20Security/S2%20-%20Install%20and%20Configure%20AD%20Certificate%20Services.html" target="_blank">S2 - Install and Configure AD Certificate Services</a></li>
         <li><a href="https://cyyang75.github.io/aci-practice-labs/System%20and%20Communication%20Security/S3%20-%20Manage%20Certificates.html" target="_blank">S3 - Manage Certificates</a></li>
     </ul>
+
+    <hr>
+
+    <p>Through these labs, I developed and sharpened the following skills:</p>
+    <ul>
+        <li>Routing and Switching Configuration</li>
+        <li>Firewall Implementation and Traffic Filtering</li>
+        <li>Intrusion Detection and Evasion</li>
+        <li>Virtualization Management</li>
+        <li>Public Key Infrastructure (PKI) and Certificate Management</li>
+    </ul>
+
+    <hr>
+
+    <p align="center">
+        <img src="https://i.imgur.com/fYzBdx7.png" alt="ACI Practice Labs"/>
+        <img src="https://i.imgur.com/umPiil9.png" alt="ACI Practice Labs"/>
+        <img src="https://i.imgur.com/1aYEClg.png" alt="ACI Practice Labs"/>
+    </p>
+
 </body>
 </html>
-  <hr>
-
-### Through these labs, I developed and sharpened the following skills:
-
-###  • Routing and Switching Configuration
- 
-###  • Firewall Implementation and Traffic Filtering
- 
-###  • Intrusion Detection and Evasion
- 
-###  • Virtualization Management
- 
-###  • Public Key Infrastructure (PKI) and Certificate Management
- 
----
-
-![ACI Practice Labs](https://i.imgur.com/fYzBdx7.png)
-
-![ACI Practice Labs](https://i.imgur.com/umPiil9.png)
-
-![ACI Practice Labs](https://i.imgur.com/1aYEClg.png)
