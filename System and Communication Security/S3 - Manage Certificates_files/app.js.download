@@ -1,0 +1,86 @@
+/*
+ * Application
+ * Version 1.0.0
+ * Central location for all imports and global module
+ *
+ * Add this file to the bottom of all new pages to gain access to the
+ * framework and global functions if you add page specific js add it below
+ * this file
+ *
+ * e.g.
+ *  	<script type="module" src="assets/js/app.js"></script>
+ * </body>
+ */
+
+/*
+ * Bootstrap 5 / framework
+ * @see https://getbootstrap.com/docs/5.1/getting-started/introduction/
+ */
+import "./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+
+/*
+ * Luxon / Date manipulation
+ * @see https://moment.github.io/luxon/#/
+ */
+import { DateTime, Duration } from "./../node_modules/luxon/src/luxon.js";
+
+/*
+ * jQuery
+ * @see https://jquery.com/
+ */
+import "./../node_modules/jquery/dist/jquery.min.js";
+
+/*
+ * Signalr 
+ * @see https://docs.microsoft.com/en-us/aspnet/signalr/
+ */
+import "./../node_modules/signalr/jquery.signalR.min.js";
+import "/signalr/hubs";
+
+/*
+ * Filepond 
+ * @see https://pqina.nl/filepond/
+ */
+import "./../node_modules/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js";
+import "./../node_modules/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js";
+import "./../node_modules/filepond/dist/filepond.js";
+
+/*
+ * Sweetalert2 
+ * @see https://sweetalert2.github.io/
+ */
+import "./../node_modules/chart.js/dist/chart.js";
+
+/*
+ * Chart.js 
+ * @see https://www.chartjs.org/
+ */
+import Swal from './../node_modules/sweetalert2/src/sweetalert2.js';
+
+/*
+ * Focus trap
+ * @see https://github.com/focus-trap/focus-trap
+ */
+import "./../node_modules/tabbable/dist/index.umd.js";
+import "./../node_modules/focus-trap/dist/focus-trap.umd.js";
+
+/*
+ * Xterm.js 
+ * @see https://github.com/xtermjs/xterm.js
+ */
+import "./../node_modules/xterm/lib/xterm.js";
+import "./../node_modules/xterm-addon-fit/lib/xterm-addon-fit.js";
+
+/*
+ * Global
+ */
+import "./global.js";
+
+/*
+ * Exports
+ */
+export {
+    Swal,
+    DateTime,
+    Duration
+};

@@ -1,0 +1,95 @@
+﻿/*
+ * Authenticated
+ * Version 1.0.0
+ * @description this file contains code which will only run on authenticated pages
+ *
+ * e.g. offline login check and keep alive etc...
+ *
+ */
+
+import { getCookie } from "./helpers.js";
+import { routes } from "./routes.js";
+import { KeepAlive } from "./keep-alive.js";
+import { IdleCheck } from "./idle-check.js";
+
+export class Authenticated {
+
+    // ReSharper disable once PossiblyUnassignedProperty
+    /**
+     * @description JQuery SignalR HUB connection.
+     */
+    hub = $.connection.practiceLabs;
+
+    constructor() {
+
+        // Offline check for auth cookie
+        this.isLoggedIn();
+
+        // Start keep alive
+        const pulse = new KeepAlive();
+        pulse.startTimer();
+
+        // Start the 'Idle' checking timer.
+        const idle = new IdleCheck();
+        idle.resetTimer();
+
+        // Start SignalR
+        this.startHubConnection();
+
+        // ReSharper disable once PossiblyUnassignedProperty
+        this.hub.client.forceLogout = (redirectUrl) => {
+            this.handleForceLogoutReceived(redirectUrl);
+        };
+    }
+
+    /*
+    * @description offline check for auth cookie, in cases where browser serves page from cache. We need to redirect to login.
+    */
+    isLoggedIn() {
+        if (getCookie(".PRACTICELABSAUTH") === null) {
+            window.location.replace(routes.login);
+        }
+    }
+
+    /**
+     * @description Starts the SignalR Hub connection.
+     * This is required on ALL Authenticated pages, as this will initially populate the
+     * SignalR Connection ID in the server.
+     */
+    startHubConnection() {
+
+        // TODO: Where can we put this so the connection process happens automatically? 
+        // i.e app.js or it's own class (e.g. new SignalRHub())...
+        // Starts the SignalR hub connection and calls server once done.
+
+        if (!this.hub) {
+            throw new Error("SignalR Hub is not configured correctly!");
+        }
+
+        this.hub.connection.start().done(() => {
+
+            // Anything we need to do on Startup should go in here.
+
+        }).fail((error) => {
+            throw new Error(`SignalR Hub connection failed with message: ${error}`);
+        });
+    }
+
+    handleForceLogoutReceived(redirectUrl) {
+
+        // TODO: Remove me!
+        console.log("Forced Logout received to URL: ", redirectUrl);
+
+        if (redirectUrl) {
+            const page = JSON.parse(redirectUrl);
+            location.href = window.location.protocol + "//" + window.location.host + "/" + page;
+
+        } else {
+            location.href = window.location.protocol + "//" + window.location.host + "/logout.aspx?r=logout";
+        }
+    }
+}
+
+// Discarded to prevent warnings from VS / ReSharper
+// ReSharper disable once UnusedLocals
+const _ = new Authenticated();

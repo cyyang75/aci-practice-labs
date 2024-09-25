@@ -1,0 +1,20 @@
+﻿/*
+ * Print
+ * Version 1.0.0
+ */
+
+class Print {
+
+    printContentButton = document.getElementById("printContentButton");
+
+    constructor() {
+
+        // binds a click event to the print report button
+        this.printContentButton.addEventListener('click', () => {
+            window.print();
+        });
+
+    }
+}
+
+new Print();

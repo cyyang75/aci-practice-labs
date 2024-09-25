@@ -1,0 +1,204 @@
+﻿/*
+ * Intercom
+ * Version 1.0.0
+ */
+import { HttpClient } from "./http-client.js";
+
+class Intercom {
+
+    httpClient = new HttpClient();
+    hub = $.connection.practicelabs;
+    signalrConnectionMethod = "";
+    appId = "";
+    allowChatBot = true;
+    helpandSupportUrl = "";
+    localhostPattern = /localhost/i;
+    practiceLabsPattern = /practice-labs/i;
+    connectionPattern = /#(.*?)#/g;
+
+    constructor() {
+
+        this.getUser().then(response => {
+
+            // Intercom requires we create an epoch timestamp from createdDate
+            const createdDate = Math.floor(new Date(response.Created).getTime() / 1000);
+
+            this.appId = response.AppId;
+            this.allowChatBot = response.AllowChatBot;
+            this.helpandSupportUrl = response.HelpAndSupportUrl;
+
+            window.intercomSettings = {
+                api_base: "https://api-iam.intercom.io",
+                app_id: response.AppId,
+                user_id: response.IntercomUserId,
+                user_hash: response.UserHash,
+                name: response.DisplayName, // Full name
+                email: response.EmailAddress, // Email address
+                created_at: createdDate, // Signup date as a Unix timestamp,
+                partner: response.Partner,
+                organisation: response.Organisation,
+                company: {
+                    id: response.OrganisationId,
+                    name: `${response.Partner} ${response.Organisation}`
+                },
+                domain: response.Domain,
+                page: top.location.href,
+                product_name: response.Title,
+                module: response.Module,
+                exercise: response.Exercise,
+                module_status: response.Status,
+                devices: JSON.stringify(response.Devices),
+                vlan_id: response.VLanId,
+                host_id: response.HostId,
+                lab_name: response.LabName,
+                lab_type: response.LabType,
+                engines_location_id: response.EnginesLocationId,
+                lab_region_id: response.LabRegionId,
+                lab_region_name: response.LabRegionName,
+                is_connect: response.IsConnect,
+                is_html_5_compatible: response.IsHtml5Compatible,
+                server: response.Server,
+                help_and_support_url: response.HelpAndSupportUrl,
+                direct_drp: response.AllowRdpClient,
+                background_color: response.BackgroundColour,
+                action_color: response.ActionColour,
+                custom_launcher_selector: "#intercom"
+            };
+        })
+        .catch(ex => {
+            // if unauthenticated, or failed, boot an anonymous intercom instance
+            console.log("User not found, loading anonymous intercom instance");
+            console.log("exception", ex);
+
+            window.intercomSettings = {
+                api_base: "https://api-iam.intercom.io",
+                app_id: this.appId
+            };
+        })
+        .finally(() => {
+            if (this.allowChatBot) {
+
+                this.bootIntercom(this.appId);
+
+                window.addEventListener("message", (event) => {
+                    // Check the source of the message against localhost and practice-labs
+                    if (this.localhostPattern.test(event.origin) || this.practiceLabsPattern.test(event.origin)) {
+                        var w = window;
+                        var ic = w.Intercom;
+                        ic('update', { devices: this.updateDevices(event.data) });
+                        console.log("updating devices", event.data);
+                    }
+                });
+            }
+        });
+    }
+
+    /**
+    * @description get user details from api, TODO PS: will be amended with extra properties
+    */
+    async getUser() {
+        return await this.httpClient.getJsonAsync(`../../api/v1/accountManagement/getUserSupportFromContext/`)
+            .catch(ex => {
+                console.log(ex);
+            });
+    }
+
+    /**
+    * @description get user details from api, TODO PS: will be amended with extra properties
+    */
+    updateDevices(deviceUpdate) {
+        if (typeof (window.intercomSettings.devices) !== "undefined" &&
+            window.intercomSettings.devices !== null &&
+            window.intercomSettings.devices !== "" &&
+            window.intercomSettings.devices !== "null") {
+            var deviceList = JSON.parse(window.intercomSettings.devices);
+            var deviceToUpdate = deviceList.find(device => device.hostname === deviceUpdate.hostname);
+            deviceToUpdate.connection = deviceUpdate.connection;
+            window.intercomSettings.devices = JSON.stringify(deviceList);
+            return window.intercomSettings.devices;
+        };
+
+        return null;
+    }
+
+    /**
+    * Below is Intercom's attach code, do not touch!
+    * If you do, TROGDOR WILL BURNINATE YOU, and Stokes will laugh at how crispy you are.
+    *
+    *                                                  :::
+    *                                              :: :::.
+    *                        \/,                    .:::::
+    *            \),          \`-._                 :::888
+    *            /\            \   `-.             ::88888
+    *           /  \            | .(                ::88
+    *          /,.  \           ; ( `              .:8888
+    *             ), \         / ;``               :::888
+    *            /_   \     __/_(_                  :88
+    *              `. ,`..-'      `-._    \  /      :8
+    *                )__ `.           `._ .\/.
+    *               /   `. `             `-._______m         _,
+    *   ,-=====-.-;'                 ,  ___________/ _,-_,'"`/__,-.
+    *  C   =--   ;                   `.`._    V V V       -=-'"#==-._
+    * :,  \     ,|      UuUu _,......__   `-.__A_A_ -. ._ ,--._ ",`` `-
+    * ||  |`---' :    uUuUu,'          `'--...____/   `" `".   `
+    * |`  :       \   UuUu:
+    * :  /         \   UuUu`-._
+    *  \(_          `._  uUuUu `-.
+    *  (_3             `._  uUu   `._
+    *                     ``-._      `.
+    *                          `-._    `.
+    *                              `.    \
+    *                                )   ;
+    *                               /   /
+    *                `.        |\ ,'   /
+    *                  ",_A_/\-| `   ,'
+    *                    `--..,_|_,-'\
+    *                           |     \
+    *                           |      \__
+    *                           |__
+    *
+    */
+    bootIntercom(appId) {
+
+        var w = window;
+        var ic = w.Intercom;
+
+        if (typeof ic === "function") {
+            ic('reattach_activator');
+            ic('update', w.intercomSettings);
+        } else {
+            var d = document;
+
+            var i = function () {
+                i.c(arguments);
+            };
+
+            i.q = [];
+
+            i.c = function (args) {
+                i.q.push(args);
+            };
+
+            w.Intercom = i;
+
+            var l = function () {
+                var s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = `https://widget.intercom.io/widget/${appId}`;
+                var x = d.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            };
+
+            if (document.readyState === 'complete') {
+                l();
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', l);
+            } else {
+                w.addEventListener('load', l, false);
+            }
+        };
+    }
+}
+
+new Intercom();
