@@ -1,7 +1,7 @@
 # ACI Learning Practice Labs
 
 <p align="center">
-<img src="https://i.imgur.com/k2dYPmk.png" alt="ACI Practice Labs"/>
+<img src="./pic/aci-practice-labs.png" alt="ACI Practice Labs"/>
 </p>
 
 During my course studies at SNHU as a Cybersecurity major, I gained hands-on experience through various virtual labs that simulate real-world operating environments. These labs allowed me to develop and test my skills using industry-standard tools and techniques such as Wireshark, Nmap, Snort, Metasploit, Kali Linux, Burp Suite, Splunk, OpenVAS, Hashcat, OSSEC, John the Ripper, Tenable Nessus, and more.
@@ -52,7 +52,7 @@ Through these labs, I developed and sharpened the following skills:
 ---
 
 <p align="center">
-<img src="https://i.imgur.com/fYzBdx7.png" alt="ACI Practice Labs"/>
-<img src="https://i.imgur.com/umPiil9.png" alt="ACI Practice Labs"/>
-<img src="https://i.imgur.com/1aYEClg.png" alt="ACI Practice Labs"/>
+<img src="./pic/aci-practice-labs-my.png" alt="ACI Practice Labs"/>
+<img src="./pic/computer-networking.png" alt="ACI Practice Labs"/>
+<img src="./pic/system-and-communication-security.png" alt="ACI Practice Labs"/>
 </p>
